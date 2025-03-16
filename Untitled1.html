@@ -5,99 +5,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>毛泽东诗集</title>
-    <link rel="stylesheet" href="styles.css">
 	<style type="text/css">
-			body {
-			font-family: 'SimSun', serif;
-			background-color: #f4f4f4;
-			color: #333;
-			line-height: 1.6;
-			margin: 0;
-			padding: 0;
-			}
-			header {
-				background-color: #333;
-				color: #fff;
-				padding: 20px 0;
-				text-align: center;
-			}
+        /* 新增：使用flex布局实现页脚置底 */
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'SimSun', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+        /* 修正字体回退 */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-			header h1 {
-				margin: 0;
-			}
+        header h1 {
+            margin: 0;
+        }
 
-			nav ul {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				display: flex;
-				justify-content: center;
-				gap: 20px;
-			}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-			nav ul li a {
-				color: #fff;
-				text-decoration: none;
-				font-weight: bold;
-			}
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
 
-			nav ul li a:hover {
-				color: #ffcc00;
-			}
+        nav ul li a:hover {
+            color: #ffcc00;
+            background-color: rgba(255,255,255,0.1);
+        }
 
-			/* 主要内容 */
-			main {
-				padding: 20px;
-				max-width: 800px;
-				margin: 0 auto;
-			}
+        /* 主要内容 */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            flex: 1;
+            width: 100%;
+        }
 
-			section {
-				margin-bottom: 40px;
-			}
+        section {
+            margin-bottom: 40px;
+            scroll-margin-top: 80px; /* 锚点跳转偏移 */
+        }
 
-			.poem {
-				background-color: #fff;
-				padding: 15px;
-				border-radius: 5px;
-				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-				margin-bottom: 20px;
-			}
+        .poem {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
 
-			.poem h3 {
-				margin-top: 0;
-			}
+        .poem h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
 
-			/* 音频播放器样式 */
-			audio {
-				width: 100%;
-				margin-top: 10px;
-			}
+        /* 音频播放器样式 */
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            height: 40px;
+        }
 
-			/* 页脚 */
-			footer {
-				background-color: #333;
-				color: #fff;
-				text-align: center;
-				padding: 10px 0;
-				position: fixed;
-				width: 100%;
-				bottom: 0;
-			}
-	</style>
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+
+        /* 新增：移动端适配 */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
     <header>
+        <h1>毛泽东诗集</h1>
         <nav>
             <ul>
-                <li>首页</li>
-                <li>诗集</li>
-                <li>关于</li>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#poems">诗集</a></li>
+                <li><a href="#about">关于</a></li>
             </ul>
         </nav>
-        <h1>毛泽东诗集</h1>
     </header>
+
 
     <!-- 诗集展示区域 -->
     <main>
@@ -114,14 +141,13 @@
                 <p>望长城内外，惟余莽莽；大河上下，顿失滔滔。</p >
                 <p>山舞银蛇，原驰蜡象，欲与天公试比高。</p >
                 <p>须晴日，看红装素裹，分外妖娆。</p >
-		<p>江山如此多娇，引无数英雄竞折腰。</p>
-		<p>惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。</p>
-		<p>一代天骄，成吉思汗，只识弯弓射大雕。</p>
-		<p>俱往矣，数风流人物，还看今朝。</p>
+				<p>江山如此多娇，引无数英雄竞折腰。</p>
+				<p>惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。</p>
+				<p>一代天骄，成吉思汗，只识弯弓射大雕。</p>
+				<p>俱往矣，数风流人物，还看今朝。</p>
                 <!-- 添加朗诵音频 -->
                 <audio controls>
-                    <source src="audio/q.mp3" type="audio\mpeg">
-		    <source src="audio/q.mp3" type="audio\ogg">
+                    <source src="audio/q.mp3" type="audio/mp3">
                     您的浏览器不支持音频播放。
                 </audio>
             </div>
@@ -133,8 +159,7 @@
                 <p>萧瑟秋风今又是，换了人间。</p >
                 <!-- 添加朗诵音频 -->
                 <audio controls>
-                    <source src="audio/a.mp3" type="audio\mpeg">
-		    <source src="audio/a.mp3" type="audio\ogg">
+                    <source src="audio/a.mp3" type="audio/mp3">
                     您的浏览器不支持音频播放。
                 </audio>
             </div>
@@ -144,14 +169,13 @@
                 <p>万山红遍，层林尽染；漫江碧透，百舸争流。</p >
                 <p>鹰击长空，鱼翔浅底，万类霜天竞自由。</p >
                 <p>怅寥廓，问苍茫大地，谁主沉浮？</p >
-		<p>携来百侣曾游，忆往昔峥嵘岁月稠。</p>
-		<p>恰同学少年，风华正茂；书生意气，挥斥方遒。</p>
-		<p>指点江山，激扬文字，粪土当年万户侯。</p>
-		<p>曾记否，到中流击水，浪遏飞舟</p>
+				<p>携来百侣曾游，忆往昔峥嵘岁月稠。</p>
+				<p>恰同学少年，风华正茂；书生意气，挥斥方遒。</p>
+				<p>指点江山，激扬文字，粪土当年万户侯。</p>
+				<p>曾记否，到中流击水，浪遏飞舟</p>
                 <!-- 添加朗诵音频 -->
                 <audio controls>
-                    <source src="audio/c.mp3" type="audio\mpeg">
-		    <source src="audio/c.mp3" type="audio\ogg">
+                    <source src="audio/c.mp3" type="audio/mp3">
                     您的浏览器不支持音频播放。
                 </audio>
             </div>
