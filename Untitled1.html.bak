@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛泽东诗集</title>
+    <link rel="stylesheet" href="styles.css">
+	<style type="text/css">
+			body {
+			font-family: 'SimSun', serif;
+			background-color: #f4f4f4;
+			color: #333;
+			line-height: 1.6;
+			margin: 0;
+			padding: 0;
+			}
+			header {
+				background-color: #333;
+				color: #fff;
+				padding: 20px 0;
+				text-align: center;
+			}
+
+			header h1 {
+				margin: 0;
+			}
+
+			nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+			}
+
+			nav ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			nav ul li a:hover {
+				color: #ffcc00;
+			}
+
+			/* 主要内容 */
+			main {
+				padding: 20px;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			section {
+				margin-bottom: 40px;
+			}
+
+			.poem {
+				background-color: #fff;
+				padding: 15px;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+			}
+
+			.poem h3 {
+				margin-top: 0;
+			}
+
+			/* 音频播放器样式 */
+			audio {
+				width: 100%;
+				margin-top: 10px;
+			}
+
+			/* 页脚 */
+			footer {
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 10px 0;
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+			}
+	</style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <ul>
+                <li>首页</li>
+                <li>诗集</li>
+                <li>关于</li>
+            </ul>
+        </nav>
+        <h1>毛泽东诗集</h1>
+    </header>
+
+    <!-- 诗集展示区域 -->
+    <main>
+        <section id="home">
+            <h2>欢迎来到毛泽东诗集</h2>
+            <p>这里展示了毛泽东的经典诗词，感受伟人的文学魅力。</p >
+        </section>
+
+        <section id="poems">
+            <h2>诗集</h2>
+            <div class="poem">
+                <h3>《沁园春·雪》</h3>
+                <p>北国风光，千里冰封，万里雪飘。</p >
+                <p>望长城内外，惟余莽莽；大河上下，顿失滔滔。</p >
+                <p>山舞银蛇，原驰蜡象，欲与天公试比高。</p >
+                <p>须晴日，看红装素裹，分外妖娆。</p >
+				<p>江山如此多娇，引无数英雄竞折腰。</p>
+				<p>惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。</p>
+				<p>一代天骄，成吉思汗，只识弯弓射大雕。</p>
+				<p>俱往矣，数风流人物，还看今朝。</p>
+                <!-- 添加朗诵音频 -->
+                <audio controls>
+                    <source src=""q.mp3"" type="audio\mpeg">
+                    您的浏览器不支持音频播放。
+                </audio>
+            </div>
+            <div class="poem">
+                <h3>《浪淘沙·北戴河》</h3>
+                <p>大雨落幽燕，白浪滔天，秦皇岛外打鱼船。</p >
+                <p>一片汪洋都不见，知向谁边？</p >
+                <p>往事越千年，魏武挥鞭，东临碣石有遗篇。</p >
+                <p>萧瑟秋风今又是，换了人间。</p >
+                <!-- 添加朗诵音频 -->
+                <audio controls>
+                    <source src=""a.mp3"" type="audio/mpeg">
+                    您的浏览器不支持音频播放。
+                </audio>
+            </div>
+			<div class="poem">
+                <h3>《七律·长征》</h3>
+                <p>红军不怕远征难，万水千山只等闲。</p >
+                <p>五岭逶迤腾细浪，乌蒙磅礴走泥丸。</p >
+                <p>金沙水拍云崖暖，大渡桥横铁索寒。</p >
+                <p>更喜岷山千里雪，三军过后尽开颜。</p >
+                <!-- 添加朗诵音频 -->
+                <audio controls>
+                    <source src="audio/qilvchangzheng.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放。
+                </audio>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>关于</h2>
+            <p>本网页致力于展示毛泽东的经典诗词，供文学爱好者学习和欣赏。</p >
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2025 毛泽东诗集</p >
+		<p>版权所有————江西科技师范大学</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
